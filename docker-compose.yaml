@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  git:
+    image: alpine/git
+    volumes:
+      - ./source_code:/data
+    command: clone https://github.com/Lithin87/reactstudy.git /data
+
