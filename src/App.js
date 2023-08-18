@@ -13,18 +13,21 @@ function App() {
  const themes = {
      num: blr,
      disablestatus : disableStatus,
-     upnd : () => { setBlr(blr+1) },
-     disablefn : () => {  setDisableStatus(true)}
+     upnd : (step) => { setBlr(blr+step) },
+     disableToggle : () => {  setDisableStatus(!disableStatus)}
  };
 
   return (
-    <div className="App">
+    <div className="App1">
     <AuthContext.Provider value={themes}>
     
     <Main/>
     </AuthContext.Provider>
     </div>
   );
+
+  
 }
+
 
 export default App;

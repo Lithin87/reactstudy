@@ -9,7 +9,7 @@ const Button = ({children}) => {
 
     let ctx = useContext(AuthContext);
 
-    const update = () =>  {setCur(cur+1 );  ctx.num = ctx.num+1 ;  ctx.upnd()}  
+    const update = () =>  {setCur(cur+1 );    ctx.upnd(1) }  
 
     return (
     <div>

@@ -15,20 +15,18 @@ function Main() {
     third: 3,
   };
 
-  let ctx = useContext(AuthContext);
+let ctx = useContext(AuthContext);
 const theme = "light";
 
   return (
     <div>
 
      {  jk.map( s => (<Button> {s} </Button>) ) }  
-
      {  Object.keys(object).map( s => (<Button> {s} </Button>)  ) }  
 
-     <button onClick={ctx.disablefn} > DISABLE </button>)
+     <button onClick={ctx.disableToggle} > DISABLE </button>)
      <br></br>
      <label> {ctx.num}</label>
-
 
      <ThemeContext.Provider value={theme}>
      <Form/>
