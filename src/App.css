@@ -1,4 +1,14 @@
 .App1 {
     text-align: center;
   }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color:blueviolet;
+  }
   
