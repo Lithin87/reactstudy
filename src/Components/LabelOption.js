@@ -11,10 +11,6 @@ function LabelOption({ children , htmlFor}) {
     const handleClick = () => { ctx.setActive( { ...(Object.fromEntries(Object.keys(ctx.active).map((key) => [key, false]))), [htmlFor] : !ctx.active[htmlFor] } )};
     console.log(ctx.active);
 
-    // axios.get(apiUrl)
-    // .then(response => setData(response.data))
-    // .catch(error => console.error('Error fetching data:', error));
-
 
     const buttonStyle = {
         backgroundColor : (ctx.active[htmlFor] === false) ?  'bisque' : 'green' ,
