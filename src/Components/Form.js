@@ -1,12 +1,27 @@
+import Axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
+  
+function Form() {
 
-function Form({ children }) {
+  const [data, setData] = useState("Kafka VM Not Created");
+
+  const backendHost = process.env.REACT_APP_BACKEND_HOST;
+  const url_r = backendHost + '/services/ipaddress';
+
+  useEffect(() => {
+    Axios.get(url_r).then(response => {  setData(response.data);  })
+      .catch(error => {
+        console.error('IP Address fetch went wrong!', error);
+      });
+  }, [url_r]); 
+
 
 
     return (
       <>
-        <button>Sign up</button>
-        <button>Log in</button>
+      <a href={data} target="_blank" rel="noopener noreferrer"> <label>KAFKA CONTROL CENTER : {data}</label> </a>
+        <br></br>
       </>
     );
   }
