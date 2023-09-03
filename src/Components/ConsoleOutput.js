@@ -1,23 +1,18 @@
-import React, { useState } from 'react';
+import AuthContext from '../Contexts/app-context';
+import { useContext } from 'react';
 
 function ConsoleOutput() {
-  const [text, setText] = useState('');
 
-  const handleInputChange = (event) => {
-    setText(event.target.value);
-  };
+  const ctx = useContext(AuthContext);
 
   return (
     <div>
       <h2>Console Output</h2>
       <textarea
-        value={text}
-        onChange={handleInputChange}
-        rows={6} // You can adjust the number of rows
-        cols={50} // You can adjust the number of columns
+        value={ctx.consoleText}
+        rows={40} 
+        cols={120} 
       />
-      <p>Current Text:</p>
-      <pre>{text}</pre>
     </div>
   );
 }

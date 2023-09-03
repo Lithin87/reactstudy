@@ -1,15 +1,30 @@
 
-// import React, { useState } from 'react';
 import AuthContext from '../Contexts/app-context';
 import { useContext } from 'react';
+import Axios from 'axios';
+
 
 function LabelOption({ children , htmlFor}) {
     
-
    const ctx = useContext(AuthContext);
 
-    const handleClick = () => { ctx.setActive( { ...(Object.fromEntries(Object.keys(ctx.active).map((key) => [key, false]))), [htmlFor] : !ctx.active[htmlFor] } )};
-    console.log(ctx.active);
+  //  htmlFor
+
+    const handleClick = async () => { ctx.setActive( { ...(Object.fromEntries(Object.keys(ctx.active).map((key) => [key, false]))), [htmlFor] : !ctx.active[htmlFor] } )
+    const index = parseInt(htmlFor.slice(-1))
+    const url_r = 'http://localhost:3000/services/'+ index;
+    let response = "";
+    if ([3, 4, 5].includes(index)) 
+      response = await Axios.post(url_r).catch((error) => {console.log("Error accessing backend"+error);  ctx.setConsoleText(error);});
+  else
+    response = await Axios.get(url_r).catch((error) => {console.log("Error accessing backend"+error);  ctx.setConsoleText(error);});
+    if(response)
+    {const formattedJSON = JSON.stringify(response.data, null, 2); 
+    console.log(formattedJSON);
+    ctx.setConsoleText(formattedJSON);}
+  };
+
+    // console.log(ctx.active);
 
 
     const buttonStyle = {

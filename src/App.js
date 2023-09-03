@@ -7,7 +7,8 @@ import Main from './Components/Main'
 
 function App() {
 
-  let [ active, setActive]  = useState({field1 : false,
+  let [ active, setActive]  = useState(
+    {field1 : false,
     field2 : false,
     field3 : false,
     field4 : false,
@@ -15,12 +16,15 @@ function App() {
     field6 : false,
     field7 : false,
     field8 : false});
+  let [ consoleText, setConsoleText]  = useState();
   let [ disableStatus, setDisableStatus]  = useState(false);
 
  const activeCtx = {
      active: active,
      setActive : setActive,
-     disableToggle : () => {  setDisableStatus(!disableStatus)}
+     disableToggle : () => {  setDisableStatus(!disableStatus)},
+      consoleText : consoleText ,
+      setConsoleText : setConsoleText
  };
 
   return (
@@ -28,6 +32,7 @@ function App() {
     <AuthContext.Provider value={activeCtx}>
     
     <Main/>
+    
     </AuthContext.Provider>
     </div>
   );

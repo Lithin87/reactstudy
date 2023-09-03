@@ -1,7 +1,7 @@
 
 import ConsoleOutput from './ConsoleOutput';
 import Form from './Form';
-import SixLabelForm from './SixLabelForm';
+import MenuOption from './MenuOption';
 import ThemeContext from '../Contexts/theme-context';
 
 
@@ -17,7 +17,7 @@ const theme = "light";
      <Form/>
      </ThemeContext.Provider>
 
-     <SixLabelForm />
+     <MenuOption />
      <ConsoleOutput/>
 
     </div>

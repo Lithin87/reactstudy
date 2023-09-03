@@ -1,6 +1,6 @@
 import React from 'react';
 import LabelOption from './LabelOption';
-const SixLabelOptionForm = () => {
+const MenuOption = () => {
   return (
     <div>
      
@@ -40,4 +40,4 @@ const SixLabelOptionForm = () => {
   );
 };
 
-export default SixLabelOptionForm;
+export default MenuOption;
