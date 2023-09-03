@@ -7,12 +7,13 @@ import Axios from 'axios';
 function LabelOption({ children , htmlFor}) {
     
    const ctx = useContext(AuthContext);
+   const backendHost = process.env.REACT_APP_BACKEND_HOST;
 
-  //  htmlFor
 
     const handleClick = async () => { ctx.setActive( { ...(Object.fromEntries(Object.keys(ctx.active).map((key) => [key, false]))), [htmlFor] : !ctx.active[htmlFor] } )
     const index = parseInt(htmlFor.slice(-1))
-    const url_r = 'http://localhost:3000/services/'+ index;
+    const url_r = backendHost + '/services/'+ index;
+    console.log(url_r);
     let response = "";
     if ([3, 4, 5].includes(index)) 
       response = await Axios.post(url_r).catch((error) => {console.log("Error accessing backend"+error);  ctx.setConsoleText(error);});
