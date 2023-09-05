@@ -1,5 +1,5 @@
 
-import ConsoleOutput from './ConsoleOutput';
+
 import Form from './Form';
 import MenuOption from './MenuOption';
 import ThemeContext from '../Contexts/theme-context';
@@ -18,8 +18,6 @@ const theme = "light";
      </ThemeContext.Provider>
 
      <MenuOption />
-     <ConsoleOutput/>
-
     </div>
   );
 }

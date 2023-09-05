@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
+import React , { useContext } from 'react';
+import AuthContext from '../Contexts/app-context';
+
 
 function MultiLineText() {
-  const [text, setText] = useState('');
+ 
+  const ctx = useContext(AuthContext);
 
   const handleInputChange = (event) => {
-    setText(event.target.value);
+    ctx.setText(event.target.value);
   };
 
   return (
     <div>
-      <h2>Console Output</h2>
+      <h2>INPUT TEXT</h2>
       <textarea
-        value={text}
+        value={ctx.text}
         onChange={handleInputChange}
-        rows={6} // You can adjust the number of rows
-        cols={50} // You can adjust the number of columns
+        rows={32} 
+        cols={100} 
       />
-      <p>Current Text:</p>
-      <pre>{text}</pre>
+   
     </div>
   );
 }

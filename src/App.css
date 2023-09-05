@@ -1,5 +1,9 @@
-.App1 {
+.App {
     text-align: center;
+    display : flex;
+    justify-content: space-around;
+    flex-direction: wrap;
+
   }
 
   .form-group {
@@ -11,4 +15,31 @@
     font-weight: bold;
     color:blueviolet;
   }
+
+  .Main{
+    flex: 1; 
+    padding: 16px;
+    background-color: #f0f0f0;
+  }
+
+  .ConsoleOutput{ 
+    flex: 1; 
+    padding: 16px;
+    background-color: #e0e0e0;
+  }
   
+  .MultiLineText{ 
+    flex: 1; 
+    padding: 16px;
+    background-color: #e0e0e0;
+  }
+  
+  
+  .column{
+    display : flex;
+    flex-direction: column;
+    flex: 1; 
+    justify-content: space-around;
+    padding: 16px;
+    background-color: #caec73;
+  }

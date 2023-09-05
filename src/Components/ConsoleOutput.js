@@ -7,10 +7,10 @@ function ConsoleOutput() {
 
   return (
     <div>
-      <h2>Console Output</h2>
+      <h2>CONSOLE OUTPUT</h2>
       <textarea
         value={ctx.consoleText}
-        rows={40} 
+        rows={30} 
         cols={120} 
       />
     </div>

@@ -3,7 +3,8 @@ import './App.css';
 import {useState} from 'react';
 import AuthContext from './Contexts/app-context';
 import Main from './Components/Main'
-
+import ConsoleOutput from './Components/ConsoleOutput';
+import MultiLineText from './Components/MultiLineText';
 
 function App() {
 
@@ -18,21 +19,30 @@ function App() {
     field8 : false});
   let [ consoleText, setConsoleText]  = useState();
   let [ disableStatus, setDisableStatus]  = useState(false);
+  const [text, setText] = useState('');
 
  const activeCtx = {
      active: active,
      setActive : setActive,
      disableToggle : () => {  setDisableStatus(!disableStatus)},
       consoleText : consoleText ,
-      setConsoleText : setConsoleText
+      setConsoleText : setConsoleText,
+      text : text,
+      setText : setText
  };
 
   return (
-    <div className="App1">
+
+    <div className="App">
     <AuthContext.Provider value={activeCtx}>
     
+    <div class="column">
     <Main/>
-    
+    <MultiLineText/>
+    </div>
+   
+    <ConsoleOutput/>
+
     </AuthContext.Provider>
     </div>
   );
