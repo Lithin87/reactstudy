@@ -32,8 +32,6 @@ function LabelOption({ children , htmlFor}) {
     ctx.setConsoleText(formattedJSON);}
   };
 
-    // console.log(ctx.active);
-
 
     const buttonStyle = {
         backgroundColor : (ctx.active[htmlFor] === false) ?  'bisque' : 'green' ,

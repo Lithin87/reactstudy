@@ -5,6 +5,8 @@ import AuthContext from './Contexts/app-context';
 import Main from './Components/Main'
 import ConsoleOutput from './Components/ConsoleOutput';
 import MultiLineText from './Components/MultiLineText';
+import VMImage from './Components/VMImage';
+import Form from './Components/Form';
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
   let [ consoleText, setConsoleText]  = useState();
   let [ disableStatus, setDisableStatus]  = useState(false);
   const [text, setText] = useState('');
+  const [data, setData] = useState("Kafka VM Not Created");
 
  const activeCtx = {
      active: active,
@@ -28,7 +31,9 @@ function App() {
       consoleText : consoleText ,
       setConsoleText : setConsoleText,
       text : text,
-      setText : setText
+      setText : setText,
+      data :data,
+      setData : setData
  };
 
   return (
@@ -36,8 +41,17 @@ function App() {
     <div className="App">
     <AuthContext.Provider value={activeCtx}>
     
-    <div class="column">
+    <div className="columnpane">
+
+    <div className="optionpane">
     <Main/>
+    <div className="vmpane">
+    <Form/>
+    <VMImage/>
+    </div>
+
+    </div>
+
     <MultiLineText/>
     </div>
    
