@@ -35,6 +35,10 @@ const MenuOption = () => {
         <div className="form-group">
           <LabelOption htmlFor="field8">Delete all the connector</LabelOption>
         </div>
+
+        <div className="form-group">
+          <LabelOption htmlFor="field9">Ask ChatGPT AI</LabelOption>
+        </div>
      
     </div>
   );

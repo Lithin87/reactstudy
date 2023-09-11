@@ -20,9 +20,8 @@ function LabelOption({ children , htmlFor}) {
    const url_r = backendHost + '/services/'+ index;
    console.log(url_r);
     let response = "";
-    if ([3, 4, 5].includes(index)) 
-     {console.log("came"+ctx.text) ; 
-   
+    if ([3, 4, 5 , 9].includes(index)) 
+     {console.log(ctx.text) ; 
     response = await Axios.post(url_r, ctx.text ,config).catch((error) => {console.log("Error accessing backend"+error);  ctx.setConsoleText(error);});}
   else
     response = await Axios.get(url_r).catch((error) => {console.log("Error accessing backend"+error);  ctx.setConsoleText(error);});
