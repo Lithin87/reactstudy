@@ -1,70 +1,67 @@
 .App {
-    text-align: center;
-    display : flex;
-    justify-content: space-around;
-    background-color : #3dbdf878;
-;
-  }
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: #3dbdf878;
+}
 
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    color:blueviolet;
-  }
+.columnpane {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+  padding: 16px;
+  background-color: #caec73a4;
+}
 
-  .Main{
-    flex: 1; 
-    padding: 16px;
-    background-color: #f0f0f0;
-  }
-
-  .ConsoleOutput{ 
-    flex: 1; 
-    padding: 16px;
-    background-color: #3dbdf8;
-  }
-  
-  .MultiLineText{ 
-    flex: 1; 
-    padding: 16px;
-    background-color: #e0e0e0;
-  }
-  
-  
-  .columnpane{
-    display : flex;
-    flex-direction: column;
-    flex: 1; 
-    justify-content: space-around;
-    padding: 16px;
-    background-color: #caec73a4;
-  }
-
-  .optionpane{
-    display : flex;
-    flex-direction: row;
-    flex: 1; 
-    justify-content: space-around;
-    padding: 16px;
-    background-color: #caec73;
-  }
-
-
-.small-image {
-  max-width: 100px; /* Maximum width of 200 pixels */
-  height: auto; /* Maintain the aspect ratio */
+.optionpane {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  padding: 16px;
+  background-color: #caec73;
 }
 
 .vmpane {
-  display : flex;
+  display: flex;
   flex-direction: column;
-  flex: 1; 
+  flex: 1;
   justify-content: space-around;
   align-items: center;
   padding: 16px;
   background-color: #caec73;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: blueviolet;
+}
+
+.Main {
+  flex: 1;
+  padding: 16px;
+  background-color: #f0f0f0;
+}
+
+.ConsoleOutput {
+  flex: 1;
+  padding: 16px;
+  background-color: #3dbdf8;
+}
+
+.MultiLineText {
+  flex: 1;
+  padding: 16px;
+  background-color: #e0e0e0;
+}
+
+
+.small-image {
+  max-width: 100px;
+  height: auto;
 }

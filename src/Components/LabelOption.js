@@ -14,7 +14,8 @@ function LabelOption({ children , htmlFor}) {
    const ctx = useContext(AuthContext);
    
    
-   const handleClick = async () => { ctx.setActive( { ...(Object.fromEntries(Object.keys(ctx.active).map((key) => [key, false]))), [htmlFor] : !ctx.active[htmlFor] } )
+   const handleClick = async () => {
+   ctx.setActive( { ...(Object.fromEntries(Object.keys(ctx.active).map((key) => [key, false]))), [htmlFor] : !ctx.active[htmlFor] } )
    const index = parseInt(htmlFor.slice(-1))
    const backendHost = process.env.REACT_APP_BACKEND_HOST;
    const url_r = backendHost + '/services/'+ index;
