@@ -1,15 +1,17 @@
 import React from 'react';
 import LabelOption from './LabelOption';
+import ImageHint from './ImageHint';
+
 const MenuOption = () => {
   return (
     <div>
      
         <div className="form-group">
-          <LabelOption htmlFor="field1">Create a VM</LabelOption>
+          <LabelOption htmlFor="field1">Create a VM</LabelOption> <ImageHint htmlFor="field1"></ImageHint>
         </div>
       
         <div className="form-group">
-          <LabelOption htmlFor="field2">Get a list of all connector plugins</LabelOption>
+          <LabelOption htmlFor="field2">Get a list of all connector plugins</LabelOption>  
         </div>
 
         <div className="form-group">

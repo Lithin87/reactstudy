@@ -65,3 +65,8 @@ label {
   max-width: 100px;
   height: auto;
 }
+
+.tiny-image {
+  max-width: 30px;
+  height: 20px;
+}
