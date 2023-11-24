@@ -1,0 +1,926 @@
+{
+	"info": {
+		"_postman_id": "ba6d6d92-9aaa-4b1c-8f45-6d7fb917f4fb",
+		"name": "Columbus Store Checker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1826416"
+	},
+	"item": [
+		{
+			"name": "200 OK",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{apikey}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"header\": {\r\n        \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n        \"requestingSystem\": \"DPI-PSC\"\r\n    },\r\n    \"searchFilters\": {\r\n        \"storeIdList\": [\r\n            1919,\r\n            9996,\r\n            9896,\r\n            9894,\r\n            9890,\r\n            9954,\r\n            5480,\r\n            6,\r\n            1920,\r\n            10\r\n        ],\r\n        \"productIdList\": [\r\n            \"329526003\"\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 OK Copy",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "JyK17QY0t43pf1aqlICwGZfXOxzaj2Tj",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json,text/plain,*/*",
+						"type": "text"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"header\": {\r\n        \"messageId\": \"C6221696-3949-11EB-ADC1-0242AC120002\",\r\n        \"requestingSystem\": \"DPI-PSC\"\r\n    },\r\n    \"body\": {\r\n        \"searchFilters\": {\r\n            \"productIdList\": [\r\n                \"329526003\"\r\n            ],\r\n            \"storeIdList\": [\r\n                6118,\r\n                524,\r\n                5177,\r\n                5013,\r\n                1391,\r\n                5787,\r\n                5247,\r\n                5136,\r\n                5025,\r\n                5886\r\n            ]\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://services-sit.int.wba.com/services/stockchecker/v1",
+					"protocol": "https",
+					"host": [
+						"services-sit",
+						"int",
+						"wba",
+						"com"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 OK Direct Call SIT",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					},
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.141.129.238:9847/stockchecker/api/v1/stocklevels/search",
+					"protocol": "http",
+					"host": [
+						"10",
+						"141",
+						"129",
+						"238"
+					],
+					"port": "9847",
+					"path": [
+						"stockchecker",
+						"api",
+						"v1",
+						"stocklevels",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 No Message ID",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{apikey}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "500 No Content Type Header",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Invalid Content Type Header",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 OK sanddev",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "D2pNADdfVKhGDh9I9JmygMa8mCx4GkdQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.141.136.2:9011/services/stockchecker/v1",
+					"protocol": "http",
+					"host": [
+						"10",
+						"141",
+						"136",
+						"2"
+					],
+					"port": "9011",
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "405 Invalid Method",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Invalid JSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "401 Invalid api key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "D2pNADdfVKhGDh9I9JmygdsvMa8mCx4GkdQdvsv"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "401 No api key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "401 No api key header",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error : Invalid RegeX Pattern - 1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315642-e574-47ff-880d-a8a400e33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error : Invalid RegeX Pattern - 2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315648b2ww-e574-47ff-880d-a8a400e33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error: Invalid RegeX Pattern - 3 (char short at second block)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e74-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error: Invalid RegeX Pattern - 4 (length difference in block 3)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315648b2-e574-47ff-880eed-a8a400e33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error: Invalid RegeX Pattern - 5 (length difference in block 4)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315648b2-e574-47ff-880eed-a8a400e33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error: Invalid RegeX Pattern - 6 (length difference in block 5)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/xml",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315648b2-e574-47ff-880d-a8a400dde33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error: Invalid RegeX Pattern - 7 (invalid char * added to message ID)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/xml",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315648b2-e574-****-880d-a8a400e33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error: Invalid RegeX Pattern - 8 (invalid chars @$%! added to message ID)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/xml",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315648b2-e574-47ff-@$%!-a8a400e33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Regex error: Invalid RegeX Pattern - 9 (invalid chars ^) added to message ID)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{apikey}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/xml",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\":{\"messageId\":\"315648b2-e574-47ff-^())-a8a400e33dea\",\"requestingSystem\":\"DPI\"},\"body\":{\"searchFilters\":{\"storeIdList\":[\"string\"],\"productIdList\":[\"string\"]}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/services/stockchecker/v1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"services",
+						"stockchecker",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGEE RED DEV 200 OK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "vQvyRoMPtXHbv9ARmZQI4nIgHj7mSFKc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"messageId\": \"315648b2-e574-47ff-880d-a8a400e33dea\",\r\n    \"requestingSystem\": \"DPI\"\r\n  },\r\n  \"messageBody\": {\r\n    \"storeList\": {\r\n      \"StoreID\": [\r\n        \"1561\"\r\n      ]\r\n    },\r\n    \"itemList\": {\r\n      \"itemID\": [\r\n        \"dscd15\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dhpdev01apiservices-red.gcp.boots.com/api/1.0/ext/stockchecker",
+					"protocol": "https",
+					"host": [
+						"dhpdev01apiservices-red",
+						"gcp",
+						"boots",
+						"com"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"ext",
+						"stockchecker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGEE Green : Dev 200 OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://dhpdev01apiservices-green.gcp.boots.com/api/1.0/stockchecker/stocklevel/search",
+					"protocol": "https",
+					"host": [
+						"dhpdev01apiservices-green",
+						"gcp",
+						"boots",
+						"com"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"stockchecker",
+						"stocklevel",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGEE Green : QA01 200 OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://dhpqa01apiservices-green.gcp.boots.com/api/1.0/stockchecker/stocklevel/search",
+					"protocol": "https",
+					"host": [
+						"dhpqa01apiservices-green",
+						"gcp",
+						"boots",
+						"com"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"stockchecker",
+						"stocklevel",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
